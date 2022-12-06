@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Post</h1>
+    <input onchange="GetTitleValue(this)" placeholder="Title" type="text">
+    <input onchange="GetDescValue(this)" placeholder="Description" type="text">
+
+    <button onclick="AddPost()">Add Post</button>
+
+
+    <h1>Remove Post</h1>
+    <input onchange="RemovePostIdValue(this)" placeholder="Post ID" type="number">
+    <button onclick="Remove()">Remove</button>
+
+    <h1>Comment by ID</h1>
+    <input onchange="GetPostIdValue(this)" placeholder="Post ID" type="number">
+    <input onchange="GetCommentValue(this)" placeholder="Comment" type="text">
+    <button onclick="AddComment()">Add Comment</button>
+
+
+    <script>
+
+        const myTitle = ""
+        const myDesc = ""
+        const myComment = ""
+
+        const posts = [{
+            id: 1,
+            title: "Obama neyniyir",
+            description: "Sitting on the chair",
+            comments: [{
+                commentId: 1,
+                comment: "Senin neyine lazimdi neyniyir"
+            }]
+        }]
+
+        function GetTitleValue(element){
+            myTitle = element.value
+        }
+        function GetDescValue(element){
+            myDesc = element.value
+        }
+
+        function AddPostFunc(title, description){
+            const post = {
+                id: users.length + 1,
+                title: title,
+                description: description
+            }
+            posts.push(post)
+        }
+
+        function AddPost(){
+            AddPostFunc(myTitle, myDesc, myComment)
+            console.log(`Title: ${myTitle} Description: ${myDesc}`)
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
