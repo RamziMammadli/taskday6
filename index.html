@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Create Post</h1>
-    <input onchange="GetTitleValue(this)" placeholder="Title" type="text">
-    <input onchange="GetDescValue(this)" placeholder="Description" type="text">
+    <input onchange="GetTitleValue(this)" placeholder="Title" type="text"/>
+    <input onchange="GetDescValue(this)" placeholder="Description" type="text"/>
 
     <button onclick="AddPost()">Add Post</button>
 
@@ -26,11 +26,11 @@
 
     <script>
 
-        const myTitle = ""
-        const myDesc = ""
-        const myComment = ""
+        let myTitle = ""
+        let myDesc = ""
+        let myComment = ""
 
-        const posts = [{
+        let posts = [{
             id: 1,
             title: "Obama neyniyir",
             description: "Sitting on the chair",
@@ -49,7 +49,7 @@
 
         function AddPostFunc(title, description){
             const post = {
-                id: users.length + 1,
+                id: posts.length + 1,
                 title: title,
                 description: description
             }
